@@ -58,6 +58,39 @@ Custom agents are defined as `.agent.md` files. They allow you to tailor Copilot
 | User profile folder              | User — available across all workspaces |
 | `.github-private` repo           | Organization/enterprise-wide           |
 
+
+---
+## Custom Models
+
+Update each/any of the agent files with more advanced models. You can find and replace 'model: ['YOUR MODEL HERE (copilot)']'
+
+To add a local model served by vLLM, NIM, or Ollama:
+Click on the Models box in VSCode Copilot Chat
+Click The Gear Icon next to Other Models
+CLick Add Models +
+Name Your new Custom Model Group
+
+```markdown
+[
+	{
+		"name": "Sparkles",
+		"vendor": "customendpoint",
+		"apiType": "chat-completions",
+		"models": [
+			{
+				"id": "qwen3.6:35b-a3b-q4_K_M",
+				"name": "qwen3.6:35b-a3b-q4_K_M",
+				"url": "http://10.0.0.34:11434",
+				"toolCalling": true,
+				"vision": true,
+				"maxInputTokens": 128000,
+				"maxOutputTokens": 16000
+			}
+		]
+	}
+]
+```
+
 ### Agent file structure
 
 ```markdown
