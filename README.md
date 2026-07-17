@@ -258,7 +258,7 @@ Implement the plan step by step. After each major change:
 name: Code Reviewer
 description: Review code for quality, security, and performance
 tools: ['read', 'search', 'codebase']
-model: ['Claude Sonnet 4.6 (copilot)']
+model: ['YOUR MODEL HERE (copliot)']
 ---
 
 Review the code changes for:
